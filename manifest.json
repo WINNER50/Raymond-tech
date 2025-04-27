@@ -1,0 +1,23 @@
+{
+    "name": "Raymond tech",
+    "short_name": "Raymond tech",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "image/photo.jpg",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "image/photo.jpg",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
+  

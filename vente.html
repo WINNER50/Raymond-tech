@@ -1,0 +1,510 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.Q production</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <link rel="shortcut icon" href="image/LOGOES.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">raymond-tech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produits">Nos Produits</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="container">
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="photo/product1.png" class="d-block w-100" alt="Carte Mère Gaming">
+                        <div class="carousel-caption">
+                            <h3>Carte Mère Gaming</h3>
+                            <p>Performance et style pour votre configuration</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="photo/product2.png" class="d-block w-100" alt="SSD NVMe">
+                        <div class="carousel-caption">
+                            <h3>SSD 1To NVMe</h3>
+                            <p>Vitesse et fiabilité exceptionnelles</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="photo/product3.png" class="d-block w-100" alt="Carte Graphique">
+                        <div class="carousel-caption">
+                            <h3>Carte Graphique Gaming</h3>
+                            <p>Des performances graphiques impressionnantes</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            <h1>Bienvenue chez raymond-tech</h1>
+            <p>Découvrez notre sélection de produits techniques de haute qualité</p>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <section id="produits" class="mt-4">
+            <h2 class="section-title">Nos Produits</h2>
+            <div class="row" id="produits-container">
+                <!-- Produits seront générés dynamiquement -->
+            </div>
+        </section>
+    </div>
+
+    <button id="btn-fermer" class="btn btn-fermer" title="Fermer/Retourner">
+        <i class="fas fa-times"></i>
+    </button>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 raymond-tech - Tous droits réservés</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const produits = [
+    {
+        id: 1,
+        nom: "Moniteur HP P22v G5 – Ecran HP Full HD 22 Pouces (64V81AS)",
+        caracteristiques: [
+            "Taille de l’écran: 54,5 cm (21,45 pouces) – Format 16:9",
+            "Type de Dalle: VA – Rétroéclairage: Éclairé à la périphérie",
+            "Résolution: FHD (1920 x 1080)",
+            "Temps de réponse: 5ms GtG (avec surcharge)",
+            "Connecteurs d’entrée: VGA, HDMI",
+            "Réglages de la position de l’écran: Inclinaison:-5 à +23 °C"
+        ],
+        description: "Moniteur HP P22v G5 – Ecran HP Full HD 22 Pouces (64V81AS)",
+        image: "photo/P22VG5-3.jpg"
+    },
+    {
+        id: 2,
+        nom: "SSD 1To NVMe",
+        caracteristiques: [
+            "Capacité: 1To",
+            "Vitesse de lecture: 3500 MB/s",
+            "Vitesse d'écriture: 3000 MB/s",
+            "Format M.2"
+        ],
+        description: "Disque SSD ultra rapide pour ordinateur",
+        image: "photo/product2.png"
+    },
+    {
+        id: 3,
+        nom: "ECRAN PC FULL HD 23 Pouces HP 23er Display",
+        caracteristiques: [
+            "Jouez à des jeux ou programmez des solutions technologiques sur l’écran large de 23 pouces de ce moniteur HP LED HD. L’écran plat antireflet offre des vues",
+            "Ray Tracing",
+            "sous tous les angles et l’écran 1920 x 1080 offre des images très nettes. Ce moniteur HD LED HP dispose d’entrées HDMI et VGA, vous permettant de",
+            "connecter une variété de périphériques et d’appareils."
+        ],
+        description: "ECRAN PC FULL HD 23 Pouces HP 23er Display",
+        image: "photo/og-image_desktops-gateway_1200x627.avif"
+    },
+    {
+        id: 4,
+        nom: "Cable alimentation Pc bureau",
+        caracteristiques: [
+            "Le câble d'alimentation pour PC de bureau est un accessoire essentiel pour fournir une alimentation stable et fiable à votre ordinateur. Conçu avec des matériaux de qualité supérieure,",
+            "ce câble garantit une performance optimale tout en protégeant votre PC contre les surtensions.."
+        ],
+        description: "Cable alimentation Pc bureau",
+        image: "photo/télécharger.jpeg"
+    },{
+        id: 5,
+        nom: "Câble d’alimentation 3 pins ORIGINAL Pour Chargeur PC Portable – Noir",
+        caracteristiques: [
+            "Câble d’alimentation 3 pins ORIGINAL pour chargeur de PC portable, offrant une connexion stable et sécurisée. Conçu",
+            "pour une compatibilité étendue et une durabilité maximale, parfait pour un usage quotidien."
+        ],
+        description: "Câble d’alimentation 3 pins ORIGINAL Pour Chargeur PC Portable – Noir",
+        image: "photo/télécharger (1).jpeg"
+    },{
+        id: 6,
+        nom: "Multiprise avec parasurtenseur WAYTEX 52157 - 10 prises - 2 interrupteurs - Câble 1,50m - Noir",
+        caracteristiques: [
+            "Type de prise(s) Type E",
+            "Type d'alimentation Electrique",
+            "Nombre de prises 8"
+        ],
+        description: "Multiprise avec parasurtenseur WAYTEX 52157 - 10 prises - 2 interrupteurs - Câble 1,50m - Noir",
+        image: "photo/télécharger (4).jpeg"
+    },{
+        id: 7,
+        nom: "Carte ssd",
+        caracteristiques: [
+            "Disque Dur Externe SSD TeamGroup PD1000 - Capacité 1To - Vitesse En lecture jusqu'à 1000 Mo /s - Interface USB-C , USB A 3.2 Gen 2 - Etanche Antipoussière (IP68) -",
+            "Antichoc - Résistant à la pression - Dimensions 107(L) x 40(W) x 10.9(H) mm - Garantie 3 ans."
+        ],
+        description: "carte ssd",
+        image: "photo/disque-dur-ssd-externe-pd1000-antichoc-1-to-t8fed6001t0c108-t8fed6001t0c108.webp"
+    },{
+        id: 8,
+        nom: "Cable HDMI",
+        caracteristiques: [
+            "Créez des connexions Ultra HD entre vos périphériques compatibles HDMI® avec un encombrement minimal ; prise en charge du canal de données Ethernet",
+            "DURABLE : Câble HDMI 4K ultra haut débit moulé avec gaine PVC durable pour une haute résistance/fiabilité, la décharge de traction empêche effilochage/dommages dus à des flexions répétées/utilisation brutale, idéal pour les environnements commerciaux"
+        ],
+        description: "Cable HDMI",
+        image: "photo/images (1).jpeg"
+    },{
+        id: 9,
+        nom: "La clé USB",
+        caracteristiques: [
+            "La clé USB 3.0 SanDisk Ultra Flair transfère rapidement vos fichiers. Passez moins de temps à attendre le transfert de vos fichiers et profitez des performances de rapidité de",
+            "l’USB 3.0, jusqu’à 150 Mo/s. De plus, la clé USB 3.0 possède la protection par mot de passe."
+        ],
+        description: "La clé USB",
+        image: "photo/télécharger (5).jpeg"
+    },{
+        id: 9,
+        nom: "SDMO Avenger 2500",
+        caracteristiques: [
+            "Puissance nominale : 2,1 KVA – Courant nominal : 9A – Tension nominale : 230 V – Poids : 36 kg – Type de refroidissement : l – Série : Avenger",
+            "Puissance nominale 2,1 KVA Courant nominal9 A",
+            "Tension nominale 230 V Poids 36 kg",
+            "Type de refroidissement l Série de modèles Vengeur",
+            "Fabricant de moteurs.Briggs et Stratton Type de moteur FOURGON",
+            "Puissance du moteur 4,5 kW",
+            "Equipements spéciaux: Démarreur électrique , Taire , Moniteur de fuite à la terre , Arrêt automatique en cas de manque d’huile , Interrupteur thermomagnétique , Disjoncteur de fuite à la terre"
+        ],
+        description: "SDMO Avenger 2500",
+        image: "photo/groupe.jpg"
+    }
+];
+
+class Boutique {
+    constructor() {
+        this.initPage();
+        this.setupFermerButton();
+    }
+
+    initPage() {
+        this.afficherProduits();
+    }
+
+    afficherProduits() {
+        const produitsContainer = document.getElementById('produits-container');
+        produits.forEach(produit => {
+            const produitDiv = document.createElement('div');
+            produitDiv.classList.add('col-md-4');
+            
+            const caracteristiquesHTML = produit.caracteristiques.map(carac => 
+                `<li class="list-group-item">${carac}</li>`
+            ).join('');
+
+            produitDiv.innerHTML = `
+                <div class="card" data-id="${produit.id}">
+                    <img src="${produit.image}" class="card-img-top" alt="${produit.nom}">
+                    <div class="card-body">
+                        <h5 class="card-title">${produit.nom}</h5>
+                        <p class="card-text">${produit.description}</p>
+                        <h6>Caractéristiques:</h6>
+                        <ul class="list-group list-group-flush">
+                            ${caracteristiquesHTML}
+                        </ul>
+                    </div>
+                </div>
+            `;
+            produitsContainer.appendChild(produitDiv);
+        });
+    }
+
+    setupFermerButton() {
+        const btnFermer = document.getElementById('btn-fermer');
+        btnFermer.addEventListener('click', () => {
+            window.history.back();
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new Boutique();
+});
+    </script>
+    <style>
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.card-img-top:hover {
+    opacity: 0.8;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: #007bff;
+    font-size: 1.4em;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 1.5rem;
+}
+
+.list-group-item {
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-left: 4px solid #007bff;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+.section-title {
+    color: #007bff;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #007bff, #00356b);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #007bff, #00356b);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.btn-fermer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.btn-fermer:hover {
+    transform: rotate(90deg);
+    background-color: #c82333;
+}
+
+.carousel {
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    bottom: 40px;
+}
+
+.carousel-caption h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .carousel-item {
+        height: 300px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.5em;
+    }
+
+    .carousel-caption p {
+        font-size: 1em;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .card-text {
+        font-size: 1em;
+    }
+
+    .list-group-item {
+        font-size: 0.9em;
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 30px 0;
+    }
+
+    .carousel-item {
+        height: 250px;
+    }
+
+    .carousel-caption {
+        padding: 10px;
+        bottom: 20px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9em;
+    }
+
+    .btn-fermer {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+}
+        </style>
+</body>
+</html>
